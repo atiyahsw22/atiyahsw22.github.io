@@ -1,5 +1,0 @@
-my blog in the making!
-still under construction <3
-
-
-<p></p><div class="separator" style="clear: both; text-align: center;"></div><div class="separator" style="clear: both; text-align: center;"><span face="Arial, sans-serif" style="font-size: 11pt; text-align: start; white-space: pre-wrap;"><b>Six of my next decade predictions because I overwhelmingly observe everything. </b></span></div><div class="separator" style="clear: both; text-align: center;"><span><b><i></i></b></span></div><span></span><span><!--more--></span><div class="separator" style="clear: both; text-align: center;"><br /></div><p></p><p></p><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmSZPMq1D4T2Ngv0cMhx3ulTLimtwxx1PSe_jEUOdCf9TRFOB2s33fw3aJm1fjoki5Klrb_dqUYuGJFyAQ-LnpCS0g5x-exZE2KeYEG9KmUZ5ynxx3lqWmhQiwi3qozGg8Sc90nJYgibTIX3jPlp-6gNxRRRiDENqJBtP-u3wwW3-KS3EYYHIdkmzTKYva/s2880/Untitled%20design-3.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="1920" data-original-width="2880" height="266" 

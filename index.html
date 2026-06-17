@@ -4,81 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>thepublicsenemy</title>
-    <title>a blog about everything including michael jackson</title>
     <style>
+        :root {
+            --orange: #ff8c00;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: slackey, serif;
-            max-width: 700px;
-            margin: 40px auto;
-            padding: 20px;
-            line-height: 1.75;
-            color: #222;
-            background: #fdfdfd;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: #0f0f0f;
+            color: #eee;
+            line-height: 1.6;
         }
         header {
+            background: #000;
+            padding: 2rem 5%;
             text-align: center;
-            margin-bottom: 60px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 30px;
+            border-bottom: 4px solid var(--orange);
         }
         h1 {
-            font-size: 2.4em;
-            letter-spacing: 4px;
-            margin: 0;
-            text-transform: lowercase;
+            font-size: 3.5rem;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
         }
-        h2 {
-            font-size: 1.4em;
-            margin-top: 50px;
-            border-bottom: 1px solid #eee;
+        .tagline {
+            color: var(--orange);
+            font-size: 1.3rem;
+            letter-spacing: 3px;
+        }
+        nav {
+            background: #1a1a1a;
+            padding: 1rem 5%;
+            text-align: center;
+        }
+        nav a {
+            color: #ddd;
+            margin: 0 1.5rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover { color: var(--orange); }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://picsum.photos/id/1015/2000/800'); /* Replace with your image */
+            background-size: cover;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h2 {
+            font-size: 2.8rem;
+            max-width: 800px;
+        }
+        .content {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 5%;
+        }
+        .section-title {
+            color: var(--orange);
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--orange);
             padding-bottom: 10px;
         }
+        .post-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
         .post {
-            margin-bottom: 50px;
+            background: #1a1a1a;
+            padding: 1.5rem;
         }
-        .date {
+        .post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background: #000;
             color: #666;
-            font-size: 0.95em;
-        }
-        a {
-            color: #222;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .about {
-            margin-top: 80px;
-            padding-top: 30px;
-            border-top: 1px solid #ddd;
-            font-style: italic;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>thepublicsenemy</h1>
+        <p class="tagline">ATIYAH SALEEMAH • CULTURE • THOUGHTS • CHAOS</p>
     </header>
 
-    <h2>Articles</h2>
-    
-    <div class="post">
-        <span class="date">June 17, 2026</span>
-        <h3><a href="#">Welcome to the New Site</a></h3>
-        <p>I'm rebuilding my corner of the internet from scratch. Full creative control, no more fighting with Blogger's mobile rendering.</p>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Articles</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <h2>THE ELEVATED VOICE OF MY GENERATION</h2>
     </div>
 
-    <div class="post">
-        <span class="date">June 07, 2026</span>
-        <h3><a href="#">2dafuture: 6 next decade predictions</a></h3>
-        <p>Six of my next decade predictions because I overwhelmingly observe everything.</p>
+    <div class="content">
+        <h2 class="section-title">Latest Drops</h2>
+        <div class="post-grid">
+            <div class="post">
+                <img src="https://picsum.photos/id/1015/600/300" alt="Post image">
+                <h3>Welcome to the New Site</h3>
+                <p>Rebuilding with full control and better mobile experience.</p>
+            </div>
+            <div class="post">
+                <img src="https://picsum.photos/id/201/600/300" alt="Post image">
+                <h3>2dafuture: Predictions</h3>
+                <p>Six bold predictions for the next decade.</p>
+            </div>
+        </div>
     </div>
 
-    <div class="about">
-        <h2>About Me</h2>
-        <p>atiyah saleemah</p>
-        <p>graduating with a bachelor of science in music and entertainment business has inspired me to create my own expression corner. this is the space where I share all the things bouncing around in my head.</p>
-        <p><strong>please enjoy the peaceful chaos!</strong></p>
-    </div>
+    <footer>
+        <p>&copy; thepublicsenemy • Built from scratch on GitHub Pages</p>
+    </footer>
 </body>
 </html>

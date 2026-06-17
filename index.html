@@ -22,15 +22,15 @@
             border-bottom: 4px solid var(--orange);
         }
         h1 {
-            font-size: 3.5rem;
-            letter-spacing: 8px;
+            font-size: 2.8rem;
+            letter-spacing: 6px;
             text-transform: uppercase;
-            margin-bottom: 0.5rem;
         }
         .tagline {
             color: var(--orange);
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             letter-spacing: 3px;
+            margin-top: 10px;
         }
         nav {
             background: #1a1a1a;
@@ -39,24 +39,25 @@
         }
         nav a {
             color: #ddd;
-            margin: 0 1.5rem;
+            margin: 0 1rem;
             text-decoration: none;
             font-weight: bold;
+            display: inline-block;
         }
-        nav a:hover { color: var(--orange); }
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://picsum.photos/id/1015/2000/800'); /* Replace with your image */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/id/1015/2000/800');
             background-size: cover;
-            height: 70vh;
+            background-position: center;
+            min-height: 60vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: white;
+            padding: 2rem;
         }
         .hero h2 {
-            font-size: 2.8rem;
-            max-width: 800px;
+            font-size: 2.2rem;
+            max-width: 90%;
         }
         .content {
             max-width: 1100px;
@@ -72,23 +73,22 @@
         }
         .post-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-        }
-        .post {
-            background: #1a1a1a;
-            padding: 1.5rem;
-        }
-        .post img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
         }
         footer {
             text-align: center;
-            padding: 3rem;
+            padding: 3rem 5%;
             background: #000;
             color: #666;
+        }
+
+        /* Mobile Improvements */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; letter-spacing: 4px; }
+            .hero h2 { font-size: 1.8rem; }
+            nav a { margin: 0.5rem 0.8rem; font-size: 0.95rem; }
+            .hero { min-height: 50vh; }
         }
     </style>
 </head>
@@ -113,12 +113,12 @@
         <h2 class="section-title">Latest Drops</h2>
         <div class="post-grid">
             <div class="post">
-                <img src="https://picsum.photos/id/1015/600/300" alt="Post image">
+                <img src="https://picsum.photos/id/1015/600/300" alt="" style="width:100%; height:auto; border-radius:4px;">
                 <h3>Welcome to the New Site</h3>
                 <p>Rebuilding with full control and better mobile experience.</p>
             </div>
             <div class="post">
-                <img src="https://picsum.photos/id/201/600/300" alt="Post image">
+                <img src="https://picsum.photos/id/201/600/300" alt="" style="width:100%; height:auto; border-radius:4px;">
                 <h3>2dafuture: Predictions</h3>
                 <p>Six bold predictions for the next decade.</p>
             </div>
@@ -126,7 +126,7 @@
     </div>
 
     <footer>
-        <p>&copy; thepublicsenemy • Built from scratch on GitHub Pages</p>
+        <p>&copy; thepublicsenemy • Built from scratch</p>
     </footer>
 </body>
 </html>

@@ -111,15 +111,58 @@
         <a href="#">contact me</a>
     </nav>
 
-   <!-- STAR WALL AOL WINDOW -->
-<div id='starwall-aol'>
-  <div class='starwall-titlebar'>
-    <span>&#9733; the star wall </span>
-    <div class='starwall-buttons'>
-      <button onclick='toggleStarWall()'>_</button>
+   <!-- STAR WALL - AOL Throwback Style -->
+<div style="max-width: 900px; margin: 60px auto; padding: 20px; background: #000; border: 8px solid #ff8c00; border-radius: 8px; box-shadow: 0 0 30px rgba(255,140,0,0.3);">
+    
+    <div style="background: #001a00; color: #00ff00; padding: 8px 15px; border-bottom: 4px solid #ff8c00; font-family: 'Courier New', monospace; text-align: center; font-size: 1.1rem;">
+        <strong>★ THE STAR WALL ★</strong> &nbsp;&nbsp; AOL Chat Room Style • Anonymous Submissions Welcome
     </div>
-  </div>
+    
+    <div id="chat-window" style="background: #001a00; color: #00ff41; height: 520px; overflow-y: auto; padding: 20px; font-family: 'Courier New', monospace; line-height: 1.5; border-bottom: 4px solid #ff8c00;">
+        
+        <!-- Sample Messages (AOL style) -->
+        <div style="margin: 12px 0;">
+            <span style="color: #ff8c00;">[Guest-3921]:</span> i believe i am becoming the person i needed when i was younger
+        </div>
+        <div style="margin: 12px 0;">
+            <span style="color: #ff8c00;">[thepublicsenemy]:</span> the chaos is peaceful if you listen closely
+        </div>
+        <div style="margin: 12px 0;">
+            <span style="color: #ff8c00;">[Anonymous]:</span> i am worthy of the life i keep dreaming about
+        </div>
+        <div style="margin: 12px 0;">
+            <span style="color: #ff8c00;">[Guest-7842]:</span> soft but dangerous
+        </div>
+        
+    </div>
 
+    <!-- Submit Area -->
+    <div style="padding: 15px; background: #111; border-top: 4px solid #ff8c00; display: flex; gap: 10px;">
+        <input type="text" id="chat-input" placeholder="Type your belief here... (be kind)" 
+               style="flex: 1; padding: 12px; background: #000; border: 2px solid #ff8c00; color: #eee; font-family: 'Courier New', monospace;">
+        <button onclick="addStarMessage()" 
+                style="background: #ff8c00; color: #000; border: none; padding: 12px 24px; font-weight: bold; cursor: pointer;">
+            SEND
+        </button>
+    </div>
+</div>
+
+<script>
+function addStarMessage() {
+    const input = document.getElementById('chat-input');
+    const chatWindow = document.getElementById('chat-window');
+    
+    if (input.value.trim() === '') return;
+    
+    const newMsg = document.createElement('div');
+    newMsg.style.margin = '12px 0';
+    newMsg.innerHTML = `<span style="color: #ff8c00;">[You]:</span> ${input.value}`;
+    
+    chatWindow.appendChild(newMsg);
+    chatWindow.scrollTop = chatWindow.scrollHeight;
+    input.value = '';
+}
+</script>
   <div id='starwall-body'>
     <div class='starwall-note'>
      a public wall for the things you believe about yourself before anybody else does. anonymous is encouraged.

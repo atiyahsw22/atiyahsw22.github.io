@@ -224,15 +224,36 @@
   font-size:11px;
 
   font-weight:bold;
-
 }
-
-/* MINIMIZE */
-
-.hiddenStarwall{
-
-  display:none;
-
+<!-- Example Star Wall with Minimize Button -->
+<div id="starwall-section" style="margin: 40px 0;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <h2>The Star Wall</h2>
+        <button onclick="toggleStarWall()" style="background: #ff8c00; color: black; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">
+            Minimize / Expand
+        </button>
+    </div>
+    
+    <div id="starwall-content">
+        <!-- Your current star wall content goes here -->
+        <p>a public wall for the things you believe about yourself...</p>
+        <!-- submissions, etc. -->
+    </div>
+</div>
+<script>
+function toggleStarWall() {
+    const content = document.getElementById('starwall-content');
+    const btn = document.querySelector('button');
+    
+    if (content.style.display === 'none') {
+        content.style.display = 'block';
+        btn.textContent = 'Minimize';
+    } else {
+        content.style.display = 'none';
+        btn.textContent = 'Expand';
+    }
+}
+</script>
 }
 
 /* MOBILE */

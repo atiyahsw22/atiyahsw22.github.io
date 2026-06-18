@@ -163,25 +163,21 @@
             .hero-content h1 { font-size: 3.5rem; }
             .hero-content p { font-size: 1.3rem; }
         }
-        /* SEARCH BAR STYLES */
-.search-container {
-    position:sticky;
-    max-width: 420px;
-    margin:20px auto;
-    padding: 0 5%;
+/* SEARCH TAB */
+.search-tab {
+    display: inline-block;
+    margin-left: 15px;
 }
-#searchInput {
-    width: 100%;
-    padding:8px 16px;
+.search-tab input {
+    padding: 8px 16px;
     font-size: 1rem;
-    text-align:center;
-    border: 2px solid var(--blue);
-    border-radius: 2px;
+    width: 260px;
+    border: 3px solid var(--blue);
+    border-radius: 6px;
     background: white;
-    color:#4cbb17;
-    outline: none;
-    transition: all 0.3s;
-}
+    color: var(--blue);
+    text-align: center;
+}        
 .search-results {
     position: absolute;
     top: 100%;
@@ -197,7 +193,6 @@
     display: none;
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
-
 .search-result-item {
     padding: 14px 18px;
     border-bottom: 1px solid #eee;
@@ -205,11 +200,9 @@
     transition: background 0.2s;
     color: var(--blue);
 }
-
 .search-result-item:hover {
     background: #;
 }
-
 .search-result-item:last-child {
     border-bottom: none;
 }
@@ -225,17 +218,7 @@
     opacity: 0.8;
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-    .search-container {
-        max-width: 100%;
-        padding: 8px 16px;
-        margin: 1rem auto;
-    }
-    #searchInput {
-        padding: 10px 12px;
-        font-size: 1rem;
-    }
+
     </style>
 </head>
     <script>
@@ -308,12 +291,12 @@ document.addEventListener('click', function(e) {
         <a href="#">[mj]</a>
         <a href="#">[what i'm on]</a>
         <a href="#">[say wassup]</a>
-        
-   a href="#" class="search-link">
+
+    <a href="#" class="search-tab">
         <input type="text" id="searchInput" placeholder="what r u talkin abt?">
         <div id="searchResults" class="search-results"></div>
     </a>
-</nav>    </nav>
+</nav>    
     
     <!-- HERO -->
     <section class="hero">

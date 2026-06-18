@@ -9,10 +9,12 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            background: #ff4d00;
+            background: transparent;
             color: #0044ff;
             line-height: 1.6;
-        
+            container, div[style*="max-width"], #starwall, article, section {
+        background: transparent !important;
+        border: none !important;        
         /* Hero */
         .hero {
             height: 100vh;

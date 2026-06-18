@@ -171,7 +171,6 @@
 .search-tab {
     display: inline-block;
     margin-left: 15px;
-    vertical-align: middle;
 }
 .search-tab input {
     padding: 8px;
@@ -300,7 +299,7 @@ document.addEventListener('click', function(e) {
         <a href="#">[mj]</a>
         <a href="#">[what i'm on]</a>
         <a href="#">[say wassup]</a>
-    <a href="#" class="search-tab">
+    <div class="search-tab">        
         <input type="text" id="searchInput" placeholder="[what r u thinkin abt?]">
         <div id="searchResults" class="search-results"></div>
     </a>

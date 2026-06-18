@@ -173,9 +173,9 @@
     font-size: 1rem;
     width: 260px;
     border: none;
-    border-radius: 6px;
+    border-radius: 0px;
     background: 0044ff;
-    color:#ffffff;
+    color:#000;
     text-align: center;
 }        
 .search-results {
@@ -191,7 +191,6 @@
     overflow-y: auto;
     z-index: 1000;
     display: none;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 .search-result-item {
     padding: 14px 18px;
@@ -289,9 +288,8 @@ document.addEventListener('click', function(e) {
         <a href="#">[mj]</a>
         <a href="#">[what i'm on]</a>
         <a href="#">[say wassup]</a>
-
     <a href="#" class="search-tab">
-        <input type="text" id="searchInput" placeholder="what r u talkin abt?">
+        <input type="text" id="searchInput" placeholder="[what r u thinkin abt?]">
         <div id="searchResults" class="search-results"></div>
     </a>
 </nav>    

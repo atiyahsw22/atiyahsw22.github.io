@@ -76,12 +76,15 @@
             } 
 
         /* STAR WALL */
-        .starwall {
-            padding: 6rem 5%;
-            text-align: center;
-            background: var(--ff4d00);
-        }
-
+.starwall {
+    min-height: 75vh;    
+    padding: 6rem 5%;
+    text-align: center;
+    background: #ff4d00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
         .starwall-box {
             max-width: 800px;
             margin: 0 auto;
@@ -316,7 +319,7 @@ document.addEventListener('click', function(e) {
             </div>
             <div class="starwall-note">
                 a public wall for the things 
-            </div>
+            <div class="starwall-note">
             you believe about yourself 
                   <div class="starwall-note">             
                       before anybody else does.

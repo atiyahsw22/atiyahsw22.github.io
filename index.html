@@ -73,8 +73,17 @@
     height: 100%;
     object-fit: cover;
     z-index: 1;
-            }             
-        .hero-content h1 {
+            } 
+         .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 77, 0, 0.45);   /* orange tint */
+    z-index: 2;
+         }
+             .hero-content h1 {
             font-size: 4.4rem;
             line-height: 1.1;
             margin-bottom: 1rem;
@@ -322,7 +331,7 @@ document.addEventListener('click', function(e) {
         <h1>atiyah saleemah</h1>
         <p>in the jungle of my29 mind.</p>
     </div>
- <section/>
+    </section>
      
  </div>
     <!-- STAR WALL -->

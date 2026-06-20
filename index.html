@@ -28,31 +28,59 @@
             line-height: 1.5;
         }
 
-        /* NAV */
-        nav {
-            background: var(--orange);
-            padding: 1rem 5%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+/* NAV - Mobile Hamburger */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+}
 
-        nav a:hover {
-            color: var(--blue);
-        }
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
 
+/* Mobile View */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--orange);
+        padding: 1.5rem 0;
+        gap: 1.2rem;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 1.3rem;
+        padding: 0.5rem 5%;
+    }
         /* SEARCH BAR */
         .search-tab {
             position: relative;
@@ -219,21 +247,29 @@
     </style>
 </head>
 <body>
+<!-- NAV -->
+<nav>
+    <div class="nav-container">
+        <!-- Hamburger Button -->
+        <button class="hamburger" id="hamburger">★</button>
 
-    <!-- NAV -->
-    <nav>
-        <a href="#">[starmoney]</a>
-        <a href="#">[the abstract thought]</a>
-        <a href="#">[mj]</a>
-        <a href="#">[what i'm on]</a>
-        <a href="#">[beep me]</a>
-        
+        <!-- Menu Links -->
+        <div class="nav-links" id="navLinks">
+            <a href="#">[starmoney]</a>
+            <a href="#">[the abstract thought]</a>
+            <a href="#">[mj]</a>
+            <a href="#">[what i'm on]</a>
+            <a href="#">[beep me]</a>
+        </div>
+
+        <!-- Search -->
         <div class="search-tab">
             <input type="text" id="searchInput" placeholder="[what r u thinkin abt?]">
             <div id="searchResults" class="search-results"></div>
         </div>
-    </nav>
-
+    </div>
+</nav>   
+    
     <!-- HERO -->
     <div class="hero"></div>
 
@@ -286,7 +322,6 @@
             </div>
         </div>
     </section>
-
     <footer>
         <div class="ml-embedded" data-form="7E4JOe">
         </div>       
@@ -301,6 +336,24 @@
     ml('account', '2459636');
 </script>
 <!-- End MailerLite Universal -->
+    
+    <script>
+// Hamburger Menu Toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Close menu when clicking a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
+</script>
+    <!-- articles-->
     <script>
         const articles = [
             { title: "Welcome to the New Site", desc: "Full creative control. No more Blogger limitations.", url: "#" },

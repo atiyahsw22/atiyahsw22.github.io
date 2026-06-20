@@ -41,8 +41,9 @@ nav {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
+    gap: 1rem;
 }
 
 .hamburger {
@@ -52,13 +53,14 @@ nav {
     font-size: 2.2rem;
     color: white;
     cursor: pointer;
-    padding: 0.3rem;
 }
 
 .nav-links {
     display: flex;
     gap: 2rem;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nav-links a {
@@ -66,13 +68,19 @@ nav {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
     color: var(--blue);
 }
 
-/* Mobile Hamburger Menu */
+/* Search */
+.search-tab {
+    margin-left: auto;
+}
+
+/* Mobile Hamburger */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
@@ -98,7 +106,15 @@ nav {
     .nav-links a {
         padding: 0.6rem 5%;
         font-size: 1.35rem;
+        text-align: center;
     }
+
+    .search-tab {
+        margin-left: 0;
+        width: 100%;
+        padding: 0 5%;
+    }
+    
         /* SEARCH BAR */
         .search-tab {
             position: relative;
@@ -267,11 +283,10 @@ nav {
     
 <!-- NAV -->
 <nav>
+<nav>
     <div class="nav-container">
-        <!-- Hamburger -->
         <button class="hamburger" id="hamburger">★</button>
 
-        <!-- Menu Links -->
         <div class="nav-links" id="navLinks">
             <a href="#">[starmoney]</a>
             <a href="#">[the abstract thought]</a>
@@ -279,13 +294,12 @@ nav {
             <a href="#">[what i'm on]</a>
             <a href="#">[beep me]</a>
         </div>
-        
-        <!-- Search -->
+
         <div class="search-tab">
             <input type="text" id="searchInput" placeholder="[what r u thinkin abt?]">
             <div id="searchResults" class="search-results"></div>
         </div>
-    </div>
+        </div>
 </nav>   
     
     <!-- HERO -->

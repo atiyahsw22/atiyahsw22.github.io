@@ -34,6 +34,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .nav-container {
@@ -41,26 +42,24 @@ nav {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 1300px;
+    max-width: 1350px;
     margin: 0 auto;
-    gap: 1rem;
 }
 
 .hamburger {
     display: none;
     background: none;
     border: none;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     color: white;
     cursor: pointer;
+    padding: 0.2rem;
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 2.2rem;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .nav-links a {
@@ -68,7 +67,6 @@ nav {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
-    white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -80,7 +78,7 @@ nav {
     margin-left: auto;
 }
 
-/* Mobile Hamburger */
+/* ==================== MOBILE ==================== */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
@@ -94,9 +92,9 @@ nav {
         left: 0;
         width: 100%;
         background: var(--orange);
-        padding: 1.5rem 0;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.3);
-        gap: 1.2rem;
+        padding: 2rem 0;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        gap: 1.5rem;
     }
 
     .nav-links.active {
@@ -104,17 +102,18 @@ nav {
     }
 
     .nav-links a {
-        padding: 0.6rem 5%;
-        font-size: 1.35rem;
         text-align: center;
+        font-size: 1.4rem;
+        padding: 0.5rem 0;
     }
 
     .search-tab {
         margin-left: 0;
         width: 100%;
         padding: 0 5%;
+        margin-top: 1rem;
     }
-    
+}
         /* SEARCH BAR */
         .search-tab {
             position: relative;
@@ -283,10 +282,11 @@ nav {
     
 <!-- NAV -->
 <nav>
-<nav>
     <div class="nav-container">
+        <!-- Hamburger -->
         <button class="hamburger" id="hamburger">★</button>
 
+        <!-- Nav Links -->
         <div class="nav-links" id="navLinks">
             <a href="#">[starmoney]</a>
             <a href="#">[the abstract thought]</a>
@@ -295,12 +295,13 @@ nav {
             <a href="#">[beep me]</a>
         </div>
 
+        <!-- Search -->
         <div class="search-tab">
             <input type="text" id="searchInput" placeholder="[what r u thinkin abt?]">
             <div id="searchResults" class="search-results"></div>
         </div>
-        </div>
-</nav>   
+    </div>
+</nav>
     
     <!-- HERO -->
     <div class="hero"></div>
@@ -359,6 +360,7 @@ nav {
         </div>       
         <p>&copy; 2026 ★ peacegift.</p>
     </footer>
+    
    <!-- MailerLite Universal -->
 <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
@@ -369,20 +371,23 @@ nav {
 </script>
 <!-- End MailerLite Universal -->
     
-    <script>
-// Hamburger Menu Toggle
+   <script>
+// Hamburger Menu
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
-// Close menu when clicking a link
+
+// Close menu when link is clicked
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
     });
+});
 </script>
+
     
     <!-- articles-->
     <script>

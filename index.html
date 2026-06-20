@@ -6,9 +6,10 @@
     <title>atiyah saleemah <3</title>
     <style>
         /* Custom Star Cursor */
-* {
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='%230de616'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'/></svg>") 12 12, auto;
-}
+        * {
+            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='%230de616'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'/></svg>") 12 12, auto;
+        }
+
         :root {
             --orange: #ff4d00;
             --blue: #0044ff;
@@ -34,8 +35,8 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            align-items: center;
             gap: 2rem;
-            border-bottom: 0px solid var(--orange);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -46,129 +47,164 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 1.2rem;
-            transition: color 0.3s;
         }
 
         nav a:hover {
-            color: var(--0044ff);
+            color: var(--blue);
+        }
+
+        /* SEARCH BAR */
+        .search-tab {
+            position: relative;
+        }
+
+        .search-tab input {
+            padding: 10px 16px;
+            font-size: 1.1rem;
+            width: 260px;
+            border: none;
+            border-radius: 30px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-align: center;
+            outline: none;
+        }
+
+        .search-tab input::placeholder {
+            color: rgba(255,255,255,0.8);
+            font-weight: bold;
+        }
+
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #ff4d00;
+            border-radius: 12px;
+            margin-top: 8px;
+            max-height: 380px;
+            overflow-y: auto;
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .search-result-item {
+            padding: 14px 18px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .search-result-item:hover {
+            background: var(--blue);
+            color: white;
         }
 
         /* HERO */
         .hero {
             min-height: 65vh;
             background-image: url('fireworks.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;       
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         /* STAR WALL */
-.starwall {
-    min-height: 65vh;    
-    padding: 6rem 5%;
-    text-align: center;
-    background-image: url('fireworks.jpg');
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        .starwall {
+            min-height: 65vh;
+            padding: 6rem 5%;
+            text-align: center;
+            background-image: url('fireworks.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
         .starwall-box {
             max-width: 800px;
             margin: 0 auto;
-            background: #ff4d00;
-            color:#ff4d00;
+            background: rgba(255,77,0,0.95);
             padding: 3rem;
-            border: 12px solid var(--orange);
+            border: 12px solid white;
+            border-radius: 8px;
         }
 
         .starwall-header {
-            title: the star  wall;
-            background: var(--orange);
-            color: #ff4d00;
             font-family: 'Courier New', monospace;
-            font-size: 1.2rem;
+            font-size: 1.8rem;
             margin-bottom: 2rem;
+            color: white;
         }
+
         .starwall-note {
             font-size: 1.3rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
+            color: white;
             line-height: 1.4;
         }
-            
+
         /* ON MY MYND SECTION */
         .omm {
             min-height: 75vh;
             background-image: url('fireworks.jpg');
-            background-size: cover;        
-    background-position: center;   
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4rem 20px;
         }
-        /* Main Section with Fireworks Background */
-.omm {
-    min-height: 75vh;
-    background-image: url('fireworks.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3rem 20px 4rem;
-}
-/* Title */
-.omm-title {
-    font-size: 2.2rem;
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    text-transform: lowercase;
-    color: #ff4d00;
-    z-index: 2;
 
-/* Grid of Cards */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 2rem;
-    width: 100%;
-    max-width: 1100px;          /* ← This controls overall width */
-    margin: 0 auto;             /* Centers the grid */
-}
+        .omm-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            text-transform: lowercase;
+            color: #ffffff;
+            -webkit-text-stroke: 3px #FF6600;
+            text-stroke: 3px #FF6600;
+            text-shadow: 0 0 10px #FF6600;
+        }
 
-/* Individual Cards */
-.card {
-    background: #0DE616;
-    color: white;
-    border-radius: 4px;
-    overflow: hidden;
-    transition: transform 0.4s;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Optional polish */
-}
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 2rem;
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
 
-.card:hover {
-    transform: translateY(-12px);
-}
+        .card {
+            background: #0DE616;
+            color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.4s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
 
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
+        .card:hover {
+            transform: translateY(-12px);
+        }
 
-.card-content {
-    padding: 1.8rem;
-}
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
 
-.card h3 {
-    margin-bottom: 0.8rem;
-    font-size: 1.5rem;
-}
+        .card-content {
+            padding: 1.8rem;
+        }
+
+        .card h3 {
+            margin-bottom: 0.8rem;
+            font-size: 1.5rem;
+        }
+
         footer {
             text-align: center;
             padding: 4rem 5%;
@@ -177,133 +213,13 @@
         }
 
         @media (max-width: 768px) {
-            .hero-content h1 { font-size: 3.5rem; }
-            .hero-content p { font-size: 1.3rem; }
+            .grid {
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            }
         }
-/* SEARCH TAB */
-.search-tab {
-    display: inline-block;
-    margin-left: 15px;
-}
-.search-tab input {
-    padding: 8px;
-    font-size: 1.2rem;
-    width: 235px;
-    border: none;
-    border-radius: 0px;
-    background:#ff4d00;
-    color:#0de616;
-    text-align: center;
-    outline: none;
-}   
-/* what r u thinkin abt color */
-.search-tab input::placeholder {
-    color: white !important;
-    opacity: 1 !important;
-    font-weight: bold;
-}
-        .search-results {
-    position:absolute;
-    top: 100%;
-    left: 5%;
-    right: 5%;
-    background: #ff4d00;
-    border: 0px;
-    border-top: none;
-    border-radius: 0px;
-    max-height: 380px;
-    overflow-y: auto;
-    z-index: 1000;
-    display: none;
-}
-.search-result-item {
-    padding: 14px 18px;
-    border-bottom: 1px solid #ffffff;
-    cursor:*;
-    transition: background 0.2s;
-    color: var(--blue);
-}
-.search-result-item:hover {
-    background: #0044ff;
-}
-.search-result-item:last-child {
-    border-bottom: none;
-}
-
-.search-result-item h4 {
-    margin: 0 0 4px 0;
-    font-size: 1.05rem;
-}
-
-.search-result-item p {
-    margin: 0;
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
     </style>
 </head>
-    <script>
-// Sample articles - ADD YOUR REAL ARTICLES HERE
-const articles = [
-    {
-        title: "Welcome to the New Site",
-        desc: "Full creative control. No more Blogger limitations.",
-        url: "#",  // Change to real URL when you have pages
-        img: "https://picsum.photos/id/1015/600/400"
-    },
-    {
-        title: "2dafuture: 6 Predictions",
-        desc: "My bold observations for the next decade.",
-        url: "#",
-        img: "https://picsum.photos/id/201/600/400"
-    },
-    {
-        title: "Peaceful Chaos",
-        desc: "Thoughts from the mind of atiyah saleemah.",
-        url: "#",
-        img: "https://picsum.photos/id/237/600/400"
-    },
-    // Add more articles here as you write them
-];
-
-const searchInput = document.getElementById('searchInput');
-const searchResults = document.getElementById('searchResults');
-
-searchInput.addEventListener('input', function() {
-    const query = this.value.toLowerCase().trim();
-    
-    if (query.length < 2) {
-        searchResults.style.display = 'none';
-        return;
-    }
-
-    const filtered = articles.filter(article => 
-        article.title.toLowerCase().includes(query) || 
-        article.desc.toLowerCase().includes(query)
-    );
-
-    if (filtered.length === 0) {
-        searchResults.innerHTML = `<div class="search-result-item"><p>No results found.</p></div>`;
-    } else {
-        searchResults.innerHTML = filtered.map(article => `
-            <div class="search-result-item" onclick="window.location.href='${article.url}'">
-                <h4>${article.title}</h4>
-                <p>${article.desc}</p>
-            </div>
-        `).join('');
-    }
-    
-    searchResults.style.display = 'block';
-});
-
-// Hide results when clicking outside
-document.addEventListener('click', function(e) {
-    if (!e.target.closest('.search-container')) {
-        searchResults.style.display = 'none';
-    }
-});
-</script>
-    <body>
+<body>
 
     <!-- NAV -->
     <nav>
@@ -312,45 +228,35 @@ document.addEventListener('click', function(e) {
         <a href="#">[mj]</a>
         <a href="#">[what i'm on]</a>
         <a href="#">[beep me]</a>
-    <div class="search-tab">        
-        <input type="text" id="searchInput" placeholder="[what r u thinkin abt?]">
-        <div id="searchResults" class="search-results"></div>
-    </a>
-</nav>   
-        <!--HERO -->
-        <div class="hero"></div>
         
+        <div class="search-tab">
+            <input type="text" id="searchInput" placeholder="[what r u thinkin abt?]">
+            <div id="searchResults" class="search-results"></div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero"></div>
+
     <!-- STAR WALL -->
-   <section class="starwall">
-         <div class="starwall-box">       
-             <div class="starwall-header">
-                </strong>★the star wall★</strong>
-            <div class="starwall-note">
-                a public wall for the things 
-            <div class="starwall-note">
-            you believe about yourself 
-                  <div class="starwall-note">             
-                      before anybody else does.
-                  </div>
-                        <div class="starwall-note">                 
-                            <strong>anonymous is encouraged ★</strong>
-            </div>
-                      
-            <iframe 
-                allow="autoplay" 
-                allowtransparency="yes" 
-                frameborder="0" 
-                height="380" 
-                marginheight="0" 
-                marginwidth="0" 
-                scrolling="auto" 
-                src="https://www3.cbox.ws/box/?boxid=3554966&amp;boxtag=6azy2s" 
+    <section class="starwall">
+        <div class="starwall-box">
+            <div class="starwall-header">★ the star wall ★</div>
+            <div class="starwall-note">a public wall for the things</div>
+            <div class="starwall-note">you believe about yourself</div>
+            <div class="starwall-note">before anybody else does.</div>
+            <div class="starwall-note"><strong>anonymous is encouraged ★</strong></div>
+            
+            <iframe
+                allow="autoplay"
+                frameborder="0"
+                height="380"
+                scrolling="auto"
+                src="https://www3.cbox.ws/box/?boxid=3554966&amp;boxtag=6azy2s"
                 width="100%">
             </iframe>
         </div>
-            </section>
-
-         
+    </section>
 
     <!-- ON MY MYND -->
     <section class="omm">
@@ -384,5 +290,49 @@ document.addEventListener('click', function(e) {
         <p>&copy; 2026 ★ peacegift.</p>
     </footer>
 
+    <script>
+        const articles = [
+            { title: "Welcome to the New Site", desc: "Full creative control. No more Blogger limitations.", url: "#" },
+            { title: "2dafuture: 6 Predictions", desc: "My bold observations for the next decade.", url: "#" },
+            { title: "Peaceful Chaos", desc: "Thoughts from the mind of atiyah saleemah.", url: "#" }
+        ];
+
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase().trim();
+            
+            if (query.length < 2) {
+                searchResults.style.display = 'none';
+                return;
+            }
+
+            const filtered = articles.filter(article =>
+                article.title.toLowerCase().includes(query) || 
+                article.desc.toLowerCase().includes(query)
+            );
+
+            if (filtered.length === 0) {
+                searchResults.innerHTML = `<div class="search-result-item"><p>No results found.</p></div>`;
+            } else {
+                searchResults.innerHTML = filtered.map(article => `
+                    <div class="search-result-item" onclick="window.location.href='${article.url}'">
+                        <h4>${article.title}</h4>
+                        <p>${article.desc}</p>
+                    </div>
+                `).join('');
+            }
+            
+            searchResults.style.display = 'block';
+        });
+
+        // Hide results when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.search-tab')) {
+                searchResults.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>

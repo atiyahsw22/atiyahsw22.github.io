@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Abstract Thought • atiyah saleemah</title>
+    <style>
+        :root {
+            --orange: #ff4d00;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: var(--orange);
+            color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(0,0,0,0.25);
+            padding: 3rem 5% 2rem;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            padding: 3rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: #0DE616;
+            color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.4s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .card:hover {
+            transform: translateY(-12px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1.8rem;
+        }
+
+        .card h3 {
+            margin-bottom: 0.8rem;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            opacity: 0.9;
+            line-height: 1.45;
+        }
+
+        .back-home {
+            display: inline-block;
+            margin: 2rem 5%;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>[the abstract thought]</h1>
+        <p>Deep thoughts, observations, and reflections.</p>
+    </header>
+
+    <a href="index.html" class="back-home">← Back to Home</a>
+
+    <div class="articles-grid">
+        <!-- Add your articles here (copy + paste this block for new ones) -->
+        <div class="card">
+            <img src="https://picsum.photos/id/1015/600/400" alt="">
+            <div class="card-content">
+                <h3>Your First Article Title</h3>
+                <p>Short description or excerpt goes here. Keep it 1-2 sentences max.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -130,9 +130,9 @@
     <div class="title-bar">
         <div class="title-text" id="pageTitle">loading... ★ atiyah saleemah</div>
         <div class="window-controls">
-            <div class="win-btn" onclick="alert('Minimized ✨')">_</div>
-            <div class="win-btn" onclick="alert('Maximized ✨')">□</div>
-            <div class="win-btn" onclick="window.close()" style="font-size:18px;">×</div>
+            <div class="win-btn">_</div>
+            <div class="win-btn">□</div>
+            <div class="win-btn"style="font-size:18px;">×</div>
         </div>
     </div>
 
@@ -147,20 +147,13 @@
     </div>
 
     <div class="bottom-bar">
-        <button onclick="goBackHome()">← back to site</button>
-        <button onclick="shareArticle()">📤 share</button>
+        <button onclick="goBackHome()">← back</button>
     </div>
 </div>
 
 <script>
     function goBackHome() {
-        window.location.href = "index.html";   // Change this if needed
-    }
-
-    function shareArticle() {
-        navigator.clipboard.writeText(window.location.href).then(() => {
-            alert("✅ Link copied!");
-        });
+        window.location.href = "abstract.html";   // Change this if needed
     }
 </script>
 

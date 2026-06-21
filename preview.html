@@ -10,7 +10,7 @@
             font-family: 'Courier New', monospace;
             background: #ff4d00;
             color: #0de616;
-            padding: 40px 20px;
+            padding: 20px 10px;
             min-height: 100vh;
             cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='%230de616'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'/></svg>") 12 12, auto;
         }
@@ -24,16 +24,24 @@
             border-bottom-color: #808080;
             box-shadow: 6px 6px 0 #000;
             overflow: hidden;
+            width: 100%;
         }
 
         .title-bar {
             background: linear-gradient(to right, #000080, #1084d0);
             color: white;
-            padding: 4px 10px;
+            padding: 6px 10px;
             font-weight: bold;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .title-text {
+            flex: 1;
+            min-width: 0;
         }
 
         .window-controls {
@@ -42,7 +50,8 @@
         }
 
         .win-btn {
-            width: 22px; height: 22px;
+            width: 24px; 
+            height: 24px;
             background: #c0c0c0;
             border: 2px solid #fff;
             border-right-color: #808080;
@@ -51,26 +60,29 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 15px;
+            flex-shrink: 0;
         }
 
         .menu-bar {
             background: #c0c0c0;
-            padding: 4px 10px;
+            padding: 6px 10px;
             border-bottom: 2px solid #fff;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            overflow-x: auto;
         }
 
         .content {
             background: white;
-            padding: 40px;
+            padding: 30px 25px;
             color: #000;
-            line-height: 1.7;
-            min-height: 500px;
+            line-height: 1.75;
+            font-size: 1.05rem;
         }
 
         .content h1 {
-            font-size: 2.4rem;
+            font-size: 2rem;
             margin-bottom: 1.5rem;
             border-bottom: 3px solid #000;
             padding-bottom: 12px;
@@ -81,6 +93,34 @@
             padding: 12px;
             text-align: center;
             border-top: 2px solid #fff;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            background: #c0c0c0;
+            border: 2px solid #fff;
+            border-right-color: #808080;
+            border-bottom-color: #808080;
+            padding: 8px 16px;
+            font-family: 'Courier New', monospace;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background: #dfdfdf;
+        }
+
+        /* Mobile Optimizations */
+        @media (max-width: 600px) {
+            body { padding: 10px 8px; }
+            .content { padding: 20px 18px; }
+            .content h1 { font-size: 1.7rem; }
+            .title-bar { padding: 5px 8px; font-size: 0.95rem; }
+            .win-btn { width: 22px; height: 22px; font-size: 13px; }
         }
     </style>
 </head>
@@ -88,35 +128,40 @@
 
 <div class="window">
     <div class="title-bar">
-        <div id="pageTitle">loading... ★ atiyah saleemah</div>
+        <div class="title-text" id="pageTitle">loading... ★ atiyah saleemah</div>
         <div class="window-controls">
-            <div class="win-btn"=>_</div>
-            <div class="win-btn"=>□</div>
-            <div class="win-btn"=style="font-size:18px;">×</div>
+            <div class="win-btn" onclick="alert('Minimized ✨')">_</div>
+            <div class="win-btn" onclick="alert('Maximized ✨')">□</div>
+            <div class="win-btn" onclick="window.close()" style="font-size:18px;">×</div>
         </div>
     </div>
 
     <div class="menu-bar">
-        file &nbsp;&nbsp; edit &nbsp;&nbsp; view &nbsp;&nbsp; help
+        File &nbsp;&nbsp; Edit &nbsp;&nbsp; View &nbsp;&nbsp; Help
     </div>
 
     <div class="content" id="content">
-        <!-- Your article will appear here -->
+        <!-- Your article content will appear here -->
+        <h1>Your Article Title Goes Here</h1>
+        <p>Test this on your phone too — it should feel good now.</p>
     </div>
 
-        <div class="bottom-bar">
-        <button onclick="goBackHome()">← back</button>
+    <div class="bottom-bar">
+        <button onclick="goBackHome()">← back to site</button>
+        <button onclick="shareArticle()">📤 share</button>
     </div>
 </div>
 
 <script>
     function goBackHome() {
-        window.location.href = "abstract.html";
+        window.location.href = "index.html";   // Change this if needed
     }
-</script>
 
-<script>
-// This will load Markdown files later
+    function shareArticle() {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+            alert("✅ Link copied!");
+        });
+    }
 </script>
 
 </body>

@@ -104,10 +104,16 @@
         <!-- Your article will appear here -->
     </div>
 
-    <div class="bottom-bar">
-        <button onclick="window.history.back()">← back;url:"abstract.html"</button>
+        <div class="bottom-bar">
+        <button onclick="goBackHome()">← back</button>
     </div>
 </div>
+
+<script>
+    function goBackHome() {
+        window.location.href = "abstract.html";
+    }
+</script>
 
 <script>
 // This will load Markdown files later

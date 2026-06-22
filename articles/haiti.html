@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article - atiyah saleemah</title>
+    <title>haiti's scandal - atiyah saleemah</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -14,7 +14,6 @@
             min-height: 100vh;
             cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='%230de616'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'/></svg>") 12 12, auto;
         }
-
         .window {
             max-width: 860px;
             margin: 0 auto;
@@ -26,7 +25,6 @@
             overflow: hidden;
             width: 100%;
         }
-
         .title-bar {
             background: linear-gradient(to right, #000080, #1084d0);
             color: white;
@@ -38,20 +36,13 @@
             flex-wrap: wrap;
             gap: 8px;
         }
-
-        .title-text {
-            flex: 1;
-            min-width: 0;
-        }
-
+        .title-text { flex: 1; min-width: 0; }
         .window-controls {
             display: flex;
             gap: 4px;
         }
-
         .win-btn {
-            width: 24px; 
-            height: 24px;
+            width: 24px; height: 24px;
             background: #c0c0c0;
             border: 2px solid #fff;
             border-right-color: #808080;
@@ -61,18 +52,13 @@
             justify-content: center;
             cursor: pointer;
             font-size: 15px;
-            flex-shrink: 0;
         }
-
         .menu-bar {
             background: #c0c0c0;
             padding: 6px 10px;
             border-bottom: 2px solid #fff;
             font-size: 0.9rem;
-            white-space: nowrap;
-            overflow-x: auto;
         }
-
         .content {
             background: white;
             padding: 30px 25px;
@@ -80,14 +66,12 @@
             line-height: 1.75;
             font-size: 1.05rem;
         }
-
         .content h1 {
             font-size: 2rem;
             margin-bottom: 1.5rem;
             border-bottom: 3px solid #000;
             padding-bottom: 12px;
         }
-
         .bottom-bar {
             background: #c0c0c0;
             padding: 12px;
@@ -98,7 +82,6 @@
             gap: 10px;
             flex-wrap: wrap;
         }
-
         button {
             background: #c0c0c0;
             border: 2px solid #fff;
@@ -109,18 +92,11 @@
             cursor: pointer;
             font-size: 1rem;
         }
-
-        button:hover {
-            background: #dfdfdf;
-        }
-
-        /* Mobile Optimizations */
         @media (max-width: 600px) {
             body { padding: 10px 8px; }
             .content { padding: 20px 18px; }
             .content h1 { font-size: 1.7rem; }
             .title-bar { padding: 5px 8px; font-size: 0.95rem; }
-            .win-btn { width: 22px; height: 22px; font-size: 13px; }
         }
     </style>
 </head>
@@ -128,76 +104,36 @@
 
 <div class="window">
     <div class="title-bar">
-        <div class="title-text" id="pageTitle">loading... ★ atiyah saleemah</div>
+        <div class="title-text">Your Article Title ★ atiyah saleemah</div>
         <div class="window-controls">
-            <div class="win-btn">_</div>
-            <div class="win-btn">□</div>
-            <div class="win-btn"style="font-size:18px;">×</div>
+            <div class="win-btn"=">_</div>
+            <div class="win-btn"=">□</div>
+            <div class="win-btn" onclick="window.close()" style="font-size:18px;">×</div>
         </div>
     </div>
 
     <div class="menu-bar">
-        File &nbsp;&nbsp; Edit &nbsp;&nbsp; View &nbsp;&nbsp; Help
+        file &nbsp;&nbsp; edit &nbsp;&nbsp; view &nbsp;&nbsp; help
     </div>
 
-    <div class="content" id="content">
-        <!-- Your article content will appear here -->
-        <h1>Your Article Title Goes Here</h1>
-        <p>Test this on your phone too — it should feel good now.</p>
+    <div class="content">
+        <h1>haiti</h1>
+        
+        <!-- ================== WRITE YOUR ARTICLE HERE ================== -->
+        <p>Paste your full article text here...jnknjknjonononnnnnnnnnnnnnnnn!</p>
+        <p>Add as many paragraphs as you want! kjnjnkjnjnjinijnkjnkjkjbkjnjnjnkbbk</p>
+        <p>TESTING FANCY PANTS CHANCE LANCE DREAMS AND FRANCE</p>
+        <P>thank you for evrything!</P>
+        
+        <!-- You can also add images like this: -->
+        <!-- <img src="../fireworks.jpg" style="max-width:100%; margin:20px 0;"> -->
+        
     </div>
 
     <div class="bottom-bar">
-        <button onclick="goBackHome()">← back</button>
+        <button onclick="window.location.href='../abstract.html'"> back</button>
     </div>
 </div>
 
-<script>
-    function goBackHome() {
-        window.location.href = "abstract.html";
-        <script>
-        
- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script>
-    // Load Markdown Article
-    async function loadArticle() {
-        const params = new URLSearchParams(window.location.search);
-        let articleName = params.get('article');
-
-        if (!articleName) {
-            document.getElementById('articleContent').innerHTML = `
-                <h1>No Article Selected</h1>
-                <p>Add ?article=test to the end of the URL</p>`;
-            return;
-        }
-
-        articleName = articleName.replace('.md', '');
-
-        try {
-            const response = await fetch(`articles/${articleName}.md`);
-            if (!response.ok) throw new Error("Article not found");
-
-            const markdownText = await response.text();
-
-            // Set title
-            const firstLine = markdownText.split('\n')[0] || '';
-            const title = firstLine.startsWith('#') 
-                ? firstLine.replace(/^#+\s*/, '').trim() 
-                : articleName;
-            
-            document.getElementById('articleTitle').textContent = `${title} ★ atiyah saleemah`;
-
-            // Convert Markdown to HTML and show it
-            document.getElementById('articleContent').innerHTML = marked.parse(markdownText);
-
-        } catch (e) {
-            document.getElementById('articleContent').innerHTML = `
-                <h1>Article Not Found</h1>
-                <p>Could not load: <strong>${articleName}</strong></p>
-                <p>Make sure the file exists in the articles folder.</p>`;
-        }
-    }
-
-    // Run when the page loads
-    window.onload = loadArticle;
-</script>
-    <html>
+</body>
+</html>

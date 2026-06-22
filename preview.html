@@ -155,6 +155,42 @@
     function goBackHome() {
         window.location.href = "abstract.html";   // Change this if needed
     }
+/ Load Markdown Article
+    async function loadArticle() {
+        const params = new URLSearchParams(window.location.search);
+        let articleName = params.get('article');
+
+        if (!articleName) {
+            document.getElementById('content').innerHTML = `<h1>Error</h1><p>No article specified. Use ?article=filename</p>`;
+            return;
+        }
+
+        articleName = articleName.replace('.md', '');
+
+        try {
+            const response = await fetch(`articles/${articleName}.md`);
+            if (!response.ok) throw new Error("Not found");
+
+            const markdownText = await response.text();
+            
+            // Set title from first heading or filename
+            const firstLine = markdownText.split('\n')[0];
+            const title = firstLine.startsWith('#') ? firstLine.replace(/^#+\s*/, '').trim() : articleName;
+            document.getElementById('pageTitle').textContent = `${title} ★ atiyah saleemah`;
+
+            // Convert Markdown → HTML
+            document.getElementById('content').innerHTML = marked.parse(markdownText);
+        } catch (e) {
+            document.getElementById('content').innerHTML = `
+                <h1>Article Not Found</h1>
+                <p>Could not load: <strong>${articleName}</strong></p>
+                <p>Make sure the file is in the <strong>articles/</strong> folder.</p>
+            `;
+        }
+    }
+
+    // Run when page loads
+    window.onload = loadArticle;
 </script>
 
 </body>

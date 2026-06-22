@@ -153,15 +153,20 @@
 
 <script>
     function goBackHome() {
-        window.location.href = "abstract.html";   // Change this if needed
-    }
-/ Load Markdown Article
+        window.location.href = "abstract.html";
+        <script>
+        
+ <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+    // Load Markdown Article
     async function loadArticle() {
         const params = new URLSearchParams(window.location.search);
         let articleName = params.get('article');
 
         if (!articleName) {
-            document.getElementById('content').innerHTML = `<h1>Error</h1><p>No article specified. Use ?article=filename</p>`;
+            document.getElementById('articleContent').innerHTML = `
+                <h1>No Article Selected</h1>
+                <p>Add ?article=test to the end of the URL</p>`;
             return;
         }
 
@@ -169,29 +174,30 @@
 
         try {
             const response = await fetch(`articles/${articleName}.md`);
-            if (!response.ok) throw new Error("Not found");
+            if (!response.ok) throw new Error("Article not found");
 
             const markdownText = await response.text();
-            
-            // Set title from first heading or filename
-            const firstLine = markdownText.split('\n')[0];
-            const title = firstLine.startsWith('#') ? firstLine.replace(/^#+\s*/, '').trim() : articleName;
-            document.getElementById('pageTitle').textContent = `${title} ★ atiyah saleemah`;
 
-            // Convert Markdown → HTML
-            document.getElementById('content').innerHTML = marked.parse(markdownText);
+            // Set title
+            const firstLine = markdownText.split('\n')[0] || '';
+            const title = firstLine.startsWith('#') 
+                ? firstLine.replace(/^#+\s*/, '').trim() 
+                : articleName;
+            
+            document.getElementById('articleTitle').textContent = `${title} ★ atiyah saleemah`;
+
+            // Convert Markdown to HTML and show it
+            document.getElementById('articleContent').innerHTML = marked.parse(markdownText);
+
         } catch (e) {
-            document.getElementById('content').innerHTML = `
+            document.getElementById('articleContent').innerHTML = `
                 <h1>Article Not Found</h1>
                 <p>Could not load: <strong>${articleName}</strong></p>
-                <p>Make sure the file is in the <strong>articles/</strong> folder.</p>
-            `;
+                <p>Make sure the file exists in the articles folder.</p>`;
         }
     }
 
-    // Run when page loads
+    // Run when the page loads
     window.onload = loadArticle;
 </script>
-
-</body>
-</html>
+    <html>

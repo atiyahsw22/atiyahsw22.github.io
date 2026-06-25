@@ -243,7 +243,7 @@ nav {
         <p>&copy; 2026 ★ peacegift.</p>
     </footer>
     
-<!-- MailerLite Universal -->
+<!-- MLU-->
 <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
     .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
@@ -251,7 +251,7 @@ nav {
     (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
     ml('account', '2459636');
 </script>
-<!-- End MailerLite Universal -->
+<!-- End MLU -->
     
    <script>
 // Hamburger Menu
@@ -276,8 +276,9 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         const articles = [
             { title: "all about da missing benjamins: revisiting haiti's red cross scandal", desc: "Full creative control. No more Blogger limitations.", url: "articles/haiti.html" },
             { title: "2dafuture: 6 predictions of da next decade", desc: "My bold observations for the next decade.", url: "articles/haiti.html" },
-            { title: "pearly", desc: "Thoughts from the mind of atiyah saleemah.", url: "articles/haiti.html" }
-              { title: "michael and lonliness", desc: "Thoughts from the mind of atiyah saleemah.", url: "articles/haiti.html" }
+            { title: "pearly", desc: "Thoughts from the mind of atiyah saleemah.", url: "articles/haiti.html" },
+            { title: "michael and lonliness", desc: "Thoughts from the mind of atiyah saleemah.", url: "articles/haiti.html" },
+        
         ];
 
         const searchInput = document.getElementById('searchInput');
@@ -300,9 +301,9 @@ document.querySelectorAll('.nav-links a').forEach(link => {
                 searchResults.innerHTML = `<div class="search-result-item"><p>No results found.</p></div>`;
             } else {
                 searchResults.innerHTML = filtered.map(article => `
-                    <div class="search-result-item" onclick="window.location.href='${article.url}'">
-                        <h4>${article.title}</h4>
-                        <p>${article.desc}</p>
+                    <div class="search-result-item" onclick="window.location.href='${articles/haiti.html}'">
+                        <h4>${da missing benjamins}</h4>
+                        <p>${description}</p>
                     </div>
                 `).join('');
             }

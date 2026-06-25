@@ -319,9 +319,9 @@ document.querySelectorAll('.nav-links a').forEach(link => {
                 searchResults.innerHTML = `<div class="search-result-item"><p>No results found.</p></div>`;
             } else {
                 searchResults.innerHTML = filtered.map(article => `
-                    <div class="search-result-item" onclick="window.location.href='${articles/haiti.html}'">
-                        <h4>${da missing benjamins}</h4>
-                        <p>${description}</p>
+                    <div class="search-result-item" onclick="window.location.href='${article.url}'">
+                        <h4>${article.title}</h4>
+                        <p>${article.desc}</p>
                     </div>
                 `).join('');
             }

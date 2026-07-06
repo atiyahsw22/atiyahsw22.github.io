@@ -168,10 +168,10 @@ nav {
             min-height: 75vh;
             max-width: 100%;
             background-image: url('atiyah.jpg');
-            background-size: 97% auto;
+            background-size: contain;
             background-position: center;
-            background-repeat: no-repeat;
-           
+            background-repeat: repeat-y;
+            background-attachment: scroll;           
         }
 
         /* STAR WALL */
@@ -282,6 +282,12 @@ nav {
             .grid {
                 grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             }
+@media (max-width: 768px) {
+    .hero {
+        background-size: 100% auto;     
+        min-height: 60vh;               
+        background-attachment: scroll;
+    }           
         }
     </style>
 </head>

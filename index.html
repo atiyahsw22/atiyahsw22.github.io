@@ -167,7 +167,6 @@ nav {
         .hero {
             min-height: 75vh;
             max-width: 100%;
-            background-color: #0de616 !important;
             background-image: url('atiyah.jpg');
             background-size: contain;
             background-position: center;
@@ -282,7 +281,13 @@ nav {
             .grid {
                 grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             }
-                      
+
+            
+@media (max-width: 768px) {
+    .hero {
+        min-height: 70vh;
+        background-size: contain;       
+        background-position: center top;   /* focus on top part if needed */                     
         }
     </style>
 </head>

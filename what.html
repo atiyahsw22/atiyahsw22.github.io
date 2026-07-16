@@ -228,7 +228,12 @@ nav {
             .grid {
                 grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             }
-            .content p {
+            @media (max-width: 768px) {
+  .parallax {
+    background-attachment: scroll !important;
+      
+  }
+                .content p {
     margin-bottom: 1.4rem;
     line-height: 1.75;
             }

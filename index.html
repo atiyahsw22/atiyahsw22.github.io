@@ -309,7 +309,14 @@ nav {
                 grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             }   
  @media (max-width: 768px) {  
-     .parallax {     background-attachment: scroll !important;            
+     .parallax {     background-attachment: scroll !important; 
+
+/* HERO - VERTICAL IPHONE OVERRIDE */
+@media (max-width: 768px) {
+    .hero {
+        background-image: url('landingvertical.MOV'); 
+    }
+                
     }
     </style>
 </head>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[what i'm on] ★ atiyah saleemah <3</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">   
+    <title>[what i'm on] ★ atiyah saleemah <3/title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <!-- gtag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F83PDL54PZ"></script>
 <script>
@@ -14,15 +14,18 @@
 
   gtag('config', 'G-F83PDL54PZ');
 </script>    
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MH9YW8DDPP');
+</script>
+    
     <style>
         /* Custom Star Cursor */
         * {
             cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='%230de616'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'/></svg>") 12 12, auto;
-        }
-
-        :root {
-            --orange: #ff4d00;
-            --blue: #0044ff;
         }
         .parallax {
     background-attachment: fixed !important;
@@ -31,7 +34,11 @@
     background-size: cover !important;
     min-height: 100vh !important;
         }
-        
+        :root {
+            --orange: #ff4d00;
+            --blue: #0044ff;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -95,7 +102,7 @@ nav {
     margin-left: auto;
 }
 
-/* ==================== MOBILE ==================== */
+
 @media (max-width: 768px) {
     .hamburger {
         display: block;
@@ -179,64 +186,70 @@ nav {
             background: var(--blue);
             color: white;
         }
-        /* TAT */
-        .tat {
-            min-height: 100vh;
-            background-image: url('greenlantern.jpeg');
-            background-size: contain;
+
+        /* HERO */
+        .hero {
+            min-height: 100svh;
+            max-width: 100%;
+            background-image: url('landing page.MOV');
+            background-size: cover;
             background-position: center;
-            background-repeat: repeat;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 4rem 20px;
-        }
-
-        .tat-title {
-            font-size: 2.0rem;
+                 
+    }
+        /* STAR WALL */
+        .starwall {
+            min-height: 100svh;
+            padding: 6rem 5%;
             text-align: center;
-            margin-bottom: 3rem;
-            text-transform: lowercase;
-            color: #ffffff;
-            border-radius: 50px;
+            background-image: url('starwall4.MOV');
+            background-size: contain;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
             background-color: #0044ff;
-
+                    
         }
-        .tat-p {
-            font-size: 1.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            text-transform: lowercase;
-            color: #ffffff;
-            max-width: 620px;
-            border-radius: 0px;
-            background-color: #0044ff;
-            padding: 30px;
-            font-weight: bold;
-            border: 2px solid #ff4d00;
-            margin-top: 520px;
 
-        }
-        
         footer {
             text-align: center;
             padding: 4rem 5%;
             background: #ff4d00;
             color: white;
         }
-            @media (max-width: 768px) {
-  .parallax {
-    background-attachment: scroll !important;
-      
-  }
-                .content p {
-    margin-bottom: 1.4rem;
-    line-height: 1.75;
-            }
-    </style>
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            }   
+ @media (max-width: 768px) {  
+     .parallax {     background-attachment: scroll !important; 
+                
+               }
+
+     @media (max-width: 768px) {
+    .hero {
+        background-image: url('landingvertical.MOV');
+        background-size:contain; !important;
+        background-position: center;!important;
+        background-repeat: no repeat;!important;
+    }  
+        @media (max-width: 768px) {
+    .starwall {
+        background-image:url('starwallvertical2.PNG');
+        background-size:contain; !important;
+        background-position: center;!important;
+        background-repeat: no repeat;!important;
+    }
+    @media (max-width: 768px) {
+    .omm {
+        background-image:url('newworkvertical.jpg') !important;
+        background-size:90% auto !important;
+        background-position: center 75px !important;
+        background-repeat: no-repeat !important;
+    }  
+        </style>
 </head>
 <body>
-    <!-- NAV -->
+    
+<!-- NAV -->
 <nav>
     <div class="nav-container">
         <!-- Hamburger -->
@@ -244,10 +257,10 @@ nav {
 
         <!-- Nav Links -->
         <div class="nav-links" id="navLinks">
-            <a href="index.html">[starmoney]</a>
+             <a href="index.html">[starmoney]</a>            
             <a href="abstract.html">[the abstract thought]</a>
             <a href="what.html">[what i'm on]</a>
-          <a href="mailto:beep@atiyahsaleemah.net">[beep me]</a>      
+           <a href="mailto:beep@atiyahsaleemah.net">[beep me]</a>
         </div>
 
         <!-- Search -->
@@ -256,20 +269,17 @@ nav {
             <div id="searchResults" class="search-results"></div>
         </div>
     </div>
-</nav>  
-                                        </div>                         
+</nav>
+    
+    
 
-            
-    </div>
-                               
- 
- </div>
-                               
-                       </div> 
+   
+                </div>
+            </div>
         </div>
     </section>
     <footer>
-<div class="ml-embedded" data-form="7E4JOe"></div>
+              <div class="ml-embedded" data-form="7E4JOe"></div>
             <div> 
                 <br></br>
   <p style="color: #0044ff; font-family: sans-serif; margin-bottom: 10px; font-size: 1.1rem; text-align:center; font-weight:bold;">
@@ -282,16 +292,15 @@ nav {
     <a href="https://www.instagram.com/atiyahsaleemah" target="_blank" style="color: #ffffff; font-size: 2.4rem;">
       <i class="fab fa-instagram"></i>
     </a>
-       <a href="https://www.buymeacoffee.com/atiyahsaleemah" target="_blank" style="color: #ffffff; font-size: 2.4rem;">
+           <a href="https://www.buymeacoffee.com/atiyahsaleemah" target="_blank" style="color: #ffffff; font-size: 2.4rem;">
                 <i class="fas fa-coffee"></i>
             </a>  
   </div>
  </div>  
         <br></br>
-        <p>&copy; 2026 ★ peacegift.</p>         
-    </footer>
-    
-<!-- MLU-->
+        <p>&copy; 2026 ★ peacegift.</p>
+    </footer>  
+   <!-- MLU -->
 <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
     .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
@@ -299,7 +308,7 @@ nav {
     (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
     ml('account', '2459636');
 </script>
-<!-- End MLU -->
+<!-- END MLU -->
     
    <script>
 // Hamburger Menu
@@ -322,12 +331,12 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     <!-- articles-->
     <script>
         const articles = [
-            { title: "all about da missing benjamins: revisiting haiti's red cross scandal", desc: "with $500 million raised, why does haiti have so little to show for it?", url: "articles/haiti.html" },
+            { title: "all about da missing benjamins: revisiting haiti's red cross scandal", desc: "with $500 million raised, why does haiti have so little to show for it?" , url: "articles/haiti.html" },
             { title: "2dafuture: 6 next decade predictions", desc: "i overwhelmingly observe everything, so you have no choice but to read this because i'm forcing you.", url: "articles/2dafuture.html" },
             { title: "pearl and her delusional rage to be somebody", desc: "in her case, it's get rich or kill trying.", url: "articles/pearl.html" },
             { title: "i guess i'll always be a dreamer: a short story of loneliness", desc: "i heard him, i didn't just want to dance.", url: "articles/michael.html" },
-        
-        ];
+            
+            ];
 
         const searchInput = document.getElementById('searchInput');
         const searchResults = document.getElementById('searchResults');
@@ -366,6 +375,5 @@ document.querySelectorAll('.nav-links a').forEach(link => {
             }
         });
     </script>
-    
 </body>
 </html>
